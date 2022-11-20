@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'open sans', arial, sans-serif;
+}
+
+.logo{
+	margin: 10px auto 0 auto;
+	display: block;
+}
+
+button{
+	border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 12px;
+    background-color: #2468ad;
+    border-style: solid;
+    border: solid 1px #164576;    
+    color: white;
+    cursor: pointer;
+    clear: both;
+	float: left;
+	transition: all .25s;
+}
+
+button:focus{
+	outline: none;
+}
+
+button:hover{
+	background-color: #175c86;
+}
+
+.panel{
+	width: 13%;
+	margin: 20px;
+	float: left;
+	border: solid 1px orange;
+	position: fixed;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #f7f7e7;
+}
+
+.btn-new-row, .btn-delete, .fret-select, .btn-clear, .btn-ascii{
+	margin-bottom: 15px;
+}
+
+.paper{
+	width: 65%;
+	float: left;
+	margin: 0 0 0 16%;
+}
+
+.row{	
+	margin: 50px 0;	
+	clear: both;
+    overflow: hidden;
+    display: flex;
+}
+
+.row-delete{	
+	flex: 1;
+	color: lightgrey;		
+}
+
+.row-delete i{
+	font-style: normal;
+}
+
+.row-delete i:hover{
+	cursor: pointer;
+}
+
+.string-names{
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.string-names i{
+	float: left;
+	clear: both;
+	margin-right: 7px;
+	font-style: normal;
+}
+
+.lines{
+	flex: 60;
+	display: flex;
+	border-left: solid 3px black;
+	border-right: solid 3px black;
+}
+
+.node{
+	flex: 1;
+	float:left;
+}
+
+.line{
+	width: 100%;
+    height: 30px;
+    position: relative;
+    background-image: url(../images/line-bg.png);
+    background-repeat: repeat-x;
+    background-position-y: 50%;
+}
+
+.line:hover{
+	cursor: pointer;
+}
+
+.line p{
+    text-align: center;
+    display: block;
+    width: 75%;
+    height: 75%;
+    border: solid 1px transparent;
+    padding: 1px 0px 0px 0px;
+    line-height: 1.6;
+    color: white;
+    font-size: 12px;
+    border-radius: 12px;
+    position: absolute;
+    top: 4px;
+    left: 6px;	
+}
+
+.line:hover p{
+	border: solid 1px #6fd286;
+}
+
+.line-active p{
+    background-color: #555;
+}
+
+.select-label{
+	font-weight: bold;
+	padding: 3px 5px;
+}
+
+.fret-select{
+	display: flex;
+	justify-content: flex-start;
+	cursor: pointer;
+	flex-wrap: wrap;
+}
+
+.fret-select > p{
+	padding: 0 4px;
+}
+
+.fret-select > p:hover{
+	color: #29ae48;
+}
+
+.selected-fret{
+	color: #29ae48;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.delete-button-active{
+	background-color: red;
+	color: white;
+}
+
+.delete-button-active:hover{
+	background-color: red;
+}
+
+.delete-message{
+	color: red;
+	float: left;
+	display: none;
+	margin-left: 5px;
+}
+
+.ascii-container{
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.close-ascii{
+	position: absolute;
+    top: 40px;
+    right: 26px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.ascii-pad{
+	position: relative;
+	width: 90%;
+	margin: 5% auto 0 auto;
+	background-color: white;
+	border-radius: 25px;
+	padding: 45px;
+	font-family: monospace;
+	font-size: 18px;
+}
+
+.ascii-row{
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+.ascii-node{
+	float: left;
+}
